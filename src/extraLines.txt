@@ -1,0 +1,35 @@
+Print the given values:
+
+Number of critera:
+<p>Number of criteria: {numCriteria}</p>
+    {criteriaNames.map((name, index) => (
+<p key={index}>Criterion {index + 1} name: {name}</p>
+))}
+
+The importance fator for each combination:
+{combinations.map((combination, index) => (
+    <p key={combination}>
+      {combination}: 
+      {selectedAnswers[combination] && (
+        <span> {selectedAnswers[combination]} </span>
+      )}
+      {importanceValues[combination] && (
+        <span> importance: {importanceValues[combination]} </span>
+      )}
+    </p>
+))}
+
+I can't find how to print the most important criterion of the two in 
+every combination. It should look something like the following but
+it doesn't work, there is an error somewhere:
+{combinations.map((combination, index) => (
+  <p key={combination}>
+    {`${criteriaNames[combination.split("-")[0] - 1] || `Criterion ${combination.split("-")[0]}`} vs. ${`${criteriaNames[combination.split("-")[1] - 1] || `Criterion ${combination.split("-")[1]}`}`}: 
+    {selectedAnswers[combination] && (
+      <span> {criteriaNames[combination.split("-")[selectedAnswers[combination] - 1]]} </span>
+    )}
+    {importanceValues[combination] && (
+      <span> importance: {importanceValues[combination]} </span>
+    )}
+  </p>
+))}
