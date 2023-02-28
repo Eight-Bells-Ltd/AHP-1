@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(214, 212, 209);
   }
 
   .ahp-form {
@@ -16,18 +16,20 @@
   .outlined-box {
     border: 2px solid rgb(255, 255, 255);
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.5);
     display: inline-block;
     text-align: center;
   }
   .outlined-box td {
     border: 1px solid rgb(0, 0, 0);
     padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
   .outlined-box th {
     border: 1px solid rgb(0, 0, 0);
     padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
   .outlined-box tbody tr:last-child td {
@@ -83,4 +85,44 @@
 
   .header-title {
     font-family: "Fantasy";
+  }
+
+  .top-bar {
+    width: 14%;
+    height: 10000px;
+    background-color: rgb(156, 151, 151);
+  }
+
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0.00000001px;
+    z-index: -1;
+  }
+
+  .horizontal-line {
+    position: absolute;
+    left: 3.5cm;
+    top: 0;
+    height: 200%;
+    width: 2px;
+    background-color: rgb(90, 182, 14);
+  }
+
+  .horizontal-line-pink {
+    position: absolute;
+    left: 3.6cm;
+    top: 0;
+    height: 200%;
+    width: 2px;
+    background-color: rgb(235, 56, 175);
+  }
+
+  .horizontal-line-blue {
+    position: absolute;
+    left: 3.7cm;
+    top: 0;
+    height: 200%;
+    width: 2px;
+    background-color: rgb(56, 173, 228);
   }
