@@ -2,7 +2,9 @@ Print the given values:
 
 Number of critera:
 <p>Number of criteria: {numCriteria}</p>
-    {criteriaNames.map((name, index) => (
+
+Names of all the criteria in row:
+{criteriaNames.map((name, index) => (
 <p key={index}>Criterion {index + 1} name: {name}</p>
 ))}
 
