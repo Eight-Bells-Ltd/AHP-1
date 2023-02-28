@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './AHPForm.css';
 import logo from './logo.png';
-
+import { useNavigate } from 'react-router-dom';
+import MyComponent from './myComponent';
+import { Link } from 'react-router-dom';
 
 const AHPForm = () => {
   const [importanceValues, setImportanceValues] = useState({});
   const [numCriteria, setNumCriteria] = useState(4); // starting with 4 criteria
   const [criteriaNames, setCriteriaNames] = useState(Array(numCriteria).fill(''));
-
+  
   const handleNumCriteriaChange = (event) => {
     const newNumCriteria = parseInt(event.target.value);
     setNumCriteria(newNumCriteria);
@@ -48,7 +50,11 @@ const AHPForm = () => {
 
   return (
     <div align ='center'>
-      <div className="logo">
+      <div class="top-bar"></div>
+      <div class="horizontal-line"></div>
+      <div class="horizontal-line-pink"></div>
+      <div class="horizontal-line-blue"></div>
+        <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
       <br />
@@ -147,10 +153,10 @@ const AHPForm = () => {
         ))}
       </tbody>
     </table>
-   
-
-
+    
+    <br></br><br></br><br></br>
   </div>
+  
   );
 };
 
